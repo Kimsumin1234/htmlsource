@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form 1</title>
+  </head>
+  <body>
+    <!-- 
+        form : 웹 서버에 정보를 제출하기 위한 양식 범위를 정의
+
+        속성
+        1) action : form 안에 정보들을 어디로 전송할 것인가에 대한 URL(절대경로,상대경로)
+          - action 을 쓰지 않았다면 현재 페이지 경로가 그대로 쓰임
+        2) method : 서버로 전송할 HTTP 방식(get / post)
+          - get(기본) : 주소줄에 특정 값들이 따라다님  ex) 검색, https://naver.com?query=영화&ie=utf8
+          - post : 전송된 값들이 감춰짐  ex) 로그인, 회원가입
+
+
+        폼요소
+         1) input 태그
+          (type 에 올수있는 것들)
+          - text : 한 줄 짜리 텍스트 입력용
+          - radio
+          - checkbox
+          - submit : 폼을 서버로 전송
+          - reset
+          - button
+          - password
+
+
+         전역속성 : 모든 태그에 사용할 수 있는 속성
+          - class, id, name, data-*
+          - id : 현재 페이지에서 값은 중복이 안됨 
+     -->
+
+    <!-- div (블럭 요소) : 인라인요소를 블럭요소로 바꿀수있다 -->
+    <!-- <div>
+      <img src="../image/cat1.jpg" alt="" />
+    </div>
+    <div>
+      <img src="../image/cat2.jpg" alt="" />
+    </div> -->
+
+    <!-- 
+        input:t => 자동완성
+        input:s => 자동완성
+
+        type="text" : 네모상자
+        id 와 name 은 동일하게
+        for="" 안해도 되지만 한다면 label에 맞춰서 id,name 과 동일하게
+    -->
+    <form action="" method="get">
+      <div>
+        <label for="firstname">First name:</label>
+      </div>
+      <div>
+        <input type="text" name="firstname" id="firstname" />
+      </div>
+      <div>
+        <label for="lastname">Last name:</label>
+      </div>
+      <div>
+        <input type="text" name="lastname" id="lastname" />
+      </div>
+      <div>
+        <input type="submit" value="전송" />
+      </div>
+      <!-- 
+        get 방식
+
+        http://192.168.0.11:5500/form/form1.html?firstname=hong&lastname=dong
+
+        ? 를 기준 앞 : action 주소
+        
+        action 주소 ? key=value & key=value
+
+        key : input 요소의 name 값
+        value : 사용자 입력 값
+
+        http://192.168.0.11:5500/form/form1.html?firstname=&lastname=dong
+        사용자가 입력을 않하면 value 값은 공백
+      -->
+    </form>
+  </body>
+</html>

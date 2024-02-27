@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Element</title>
+  </head>
+  <body>
+    <!-- 
+        tag (element)
+         1) block 요소 : 혼자 행 하나 다 쓰기
+             ex) p, div, table
+
+         2) inline 요소 : 같이 나눠 쓰기
+             ex) img, span, a, em, i, b, sub, sup, input, label
+
+
+        속성
+         1) 전역 속성
+          - 모든 태그에 적용 가능한 속성
+          - id : 페이지 내에 동일한 값 불가능
+          - class : 동일한 값 가능
+          - data-* : 사용자 정의 데이터 속성을 지정(대문자 사용 불가)
+                     ex) data-id="",data-animal-type=""
+          - name : 이름 지정
+          - style : 디자인 직접 지정
+
+         2) 특정 태그 속성
+          - src, alt : img 에만 씀
+          - href : a 에만 씀
+     -->
+    <p id="title" data-hello="" style="text-decoration: underline">안녕하세요</p>
+    <span class="hello">반갑습니다</span>
+    <img src="../image/cat1.jpg" alt="" class="hello" />
+    <a href="https://www.naver.com" target="_blank">네이버</a>
+    <table>
+      <tr>
+        <th>이름</th>
+        <th>나이</th>
+      </tr>
+    </table>
+  </body>
+</html>
